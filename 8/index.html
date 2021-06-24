@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Cool CSS Registration Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Signika+Negative" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="registration">
+  <form action="">
+    <label for="email">Your email</label>
+    <input type="text">
+    <p class="error"><span>This email exists already in the database.</span></p>
+
+    <label for="pword">Password</label>
+    <input type="password">
+    <p class="error"><span>At least 30 characters.</span></p>
+
+    <label for="pwordr">Password [repeat]</label>
+    <input type="password">
+    <p class="error"><span>At least 30 characters.</span></p>
+
+    <label for="yob">Year of Birth</label>
+    <input type="text">
+    <p class="error"><span>Some text here.</span></p>
+    
+    <label for="">Country</label>
+    <select name="country" id="">
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+    </select>
+    
+    <div class="register_button"><span><a href="#">REGISTER</a></span></div>
+  </form>
+</section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</body>
+</html>

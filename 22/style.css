@@ -1,0 +1,202 @@
+@charset "UTF-8";
+body, input, button {
+  font-family: Open Sans, Arial;
+}
+
+body {
+  background: #444;
+  perspective: 800px;
+  -webkit-perspective: 800px;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 60px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s;
+}
+
+label, input {
+  font-size: 11pt;
+}
+
+label {
+  display: inline-block;
+  letter-spacing: 2px;
+  line-height: 50px;
+  text-indent: 10px;
+  text-transform: uppercase;
+  width: 110px;
+}
+
+.error {
+  color: #800;
+  font-weight: bold;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid #888;
+}
+input:focus {
+  outline: 0;
+}
+input[type=text], input[type=password] {
+  width: 155px;
+}
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label span {
+  border: 1px solid #000;
+  color: #000;
+  display: inline-block;
+  font-size: 16pt;
+  height: 12px;
+  line-height: 0.25em;
+  margin: -2px 4px 0 0;
+  padding: 0;
+  text-indent: 0;
+  vertical-align: middle;
+  width: 12px;
+}
+input[type=checkbox]:checked + label span::after {
+  content: "✓";
+}
+
+form {
+  height: 50px;
+  margin: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.17, 0.67, 0.38, 0.93);
+  width: 320px;
+}
+
+.step1 {
+  transform: rotateX(0deg);
+}
+
+.step2 {
+  transform: rotateX(-90deg);
+}
+
+.step3 {
+  transform: rotateX(-180deg);
+}
+
+.step4 {
+  transform: rotateX(-270deg);
+}
+
+.slide-out {
+  animation: slideOut 0.6s cubic-bezier(0.61, 0.06, 0.19, 0.97);
+}
+
+.side {
+  background: #fff;
+  height: 50px;
+  position: absolute;
+  width: 320px;
+}
+.side.three label {
+  width: auto;
+}
+
+.nav {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.prev, .next {
+  background: transparent;
+  border: 0;
+  display: inline;
+  color: #000;
+  font-size: 14pt;
+  height: 25px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  padding: 0;
+}
+.prev:hover, .next:hover {
+  background: #ccc;
+}
+.prev:disabled, .next:disabled {
+  visibility: hidden;
+}
+
+.login {
+  background: #5b5;
+  border: 0;
+  color: #fff;
+  font-size: 16pt;
+  height: 100%;
+  letter-spacing: 2px;
+  -moz-appearance: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  width: 275px;
+}
+.login:hover {
+  background: #6c6;
+}
+.login:active {
+  background: #4a4;
+}
+.login:focus {
+  background: #6c6;
+  outline: 0;
+}
+
+.one {
+  transform: translateZ(25px);
+  z-index: 4;
+}
+
+.two {
+  transform: translateY(25px) rotateX(-90deg);
+  z-index: 3;
+}
+
+.three {
+  text-align: center;
+  transform: translateZ(-25px) rotateX(180deg);
+  z-index: 2;
+}
+.three label {
+  text-indent: -30px;
+}
+
+.four {
+  transform: translateY(-25px) rotateX(90deg);
+  z-index: 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateY(0px) rotateX(-270deg);
+  }
+  20% {
+    transform: translateY(20px) rotateX(-270deg);
+  }
+  100% {
+    transform: translateY(-300px) rotateX(-270deg);
+  }
+}
